@@ -1,0 +1,274 @@
+{
+    "tracker_broadcast": {
+        "type": "array",
+        "dropshadow": true,
+        "margin": "10",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "content": [
+                    {
+                        "type": "array",
+                        "orientation": "vertical",
+                        "content": [
+                            {
+                                "type": "array",
+                                "orientation": "vertical",
+                                "content": [
+                                    {
+                                        "type": "array",
+                                        "orientation": "horizontal",
+                                        "content": [
+                                            {
+                                                "type": "itemgrid",
+                                                "h_alignment": "center",
+                                                "item_margin": "0,0,2,10",
+                                                "rows": [
+                                                    [
+                                                        "bowandarrows",
+                                                        "boomerangs",
+                                                        "hookshot",
+                                                        "bombs",
+                                                        "powder",
+                                                        "mushroom",
+                                                        ""
+                                                    ],
+                                                    [
+                                                        "firerod",
+                                                        "icerod",
+                                                        "bombos",
+                                                        "ether",
+                                                        "quake",
+                                                        "shovel",
+                                                        ""
+                                                    ],
+                                                    [
+                                                        "lamp",
+                                                        "hammer",
+                                                        "ocarina",
+                                                        "net",
+                                                        "book",
+                                                        "pearl",
+                                                        ""
+                                                    ],
+                                                    [
+                                                        "bottle",
+                                                        "somaria",
+                                                        "byrna",
+                                                        "cape",
+                                                        "mirror",
+                                                        "gomode",
+                                                        "aga"
+                                                    ],
+                                                    [
+                                                        "lift1",
+                                                        "boots",
+                                                        "flippers",
+                                                        "halfmagic",
+                                                        "owsword",
+                                                        "shield",
+                                                        "armor"
+                                                    ]
+                                                ]
+                                            },
+                                            {
+                                                "type": "array",
+                                                "orientation": "vertical",
+                                                "content": [
+                                                    {
+                                                        "type": "array",
+                                                        "orientation": "horizontal",
+                                                        "content": [
+                                                            {
+                                                                "type": "itemgrid",
+                                                                "margin": "0,2",
+                                                                "h_alignment": "center",
+                                                                "item_margin": "1,0",
+                                                                "item_height": 16,
+                                                                "item_width": 20,
+                                                                "rows": [
+                                                                    [
+                                                                        "hc_label"
+                                                                    ]
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "itemgrid",
+                                                                "margin": "0,2",
+                                                                "h_alignment": "center",
+                                                                "item_margin": "1,0",
+                                                                "item_size": 16,
+                                                                "badge_font_size": 10,
+                                                                "rows": [
+                                                                    [
+                                                                        "hc_smallkey"
+                                                                    ]
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "itemgrid",
+                                                                "margin": "0,2",
+                                                                "h_alignment": "center",
+                                                                "item_margin": "1,0",
+                                                                "item_height": 16,
+                                                                "item_width": 20,
+                                                                "rows": [
+                                                                    [
+                                                                        "at_label"
+                                                                    ]
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "itemgrid",
+                                                                "margin": "0,2",
+                                                                "h_alignment": "center",
+                                                                "item_margin": "1,0",
+                                                                "item_size": 16,
+                                                                "badge_font_size": 10,
+                                                                "rows": [
+                                                                    [
+                                                                        "at_smallkey"
+                                                                    ]
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "array",
+                                                        "orientation": "horizontal",
+                                                        "content": [
+                                                            {
+                                                                "type": "itemgrid",
+                                                                "margin": "0,2",
+                                                                "h_alignment": "center",
+                                                                "item_margin": "1,0",
+                                                                "item_height": 16,
+                                                                "item_width": 20,
+                                                                "rows": [
+                                                                    [
+                                                                        "ep_label"
+                                                                    ],
+                                                                    [
+                                                                        "dp_label"
+                                                                    ],
+                                                                    [
+                                                                        "toh_label"
+                                                                    ],
+                                                                    [
+                                                                        "pod_label"
+                                                                    ],
+                                                                    [
+                                                                        "sp_label"
+                                                                    ],
+                                                                    [
+                                                                        "sw_label"
+                                                                    ],
+                                                                    [
+                                                                        "tt_label"
+                                                                    ],
+                                                                    [
+                                                                        "ip_label"
+                                                                    ],
+                                                                    [
+                                                                        "mm_label"
+                                                                    ],
+                                                                    [
+                                                                        "tr_label"
+                                                                    ],
+                                                                    [
+                                                                        "gt_label"
+                                                                    ]
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "itemgrid",
+                                                                "h_alignment": "center",
+                                                                "item_margin": "1,0",
+                                                                "item_size": 16,
+                                                                "badge_font_size": 10,
+                                                                "rows": [
+                                                                    [
+                                                                        "easternpalace",
+                                                                        "ep_smallkey",
+                                                                        "ep_bigkey"
+                                                                    ],
+                                                                    [
+                                                                        "desertpalace",
+                                                                        "dp_smallkey",
+                                                                        "dp_bigkey"
+                                                                    ],
+                                                                    [
+                                                                        "towerofhera",
+                                                                        "toh_smallkey",
+                                                                        "toh_bigkey"
+                                                                    ],
+                                                                    [
+                                                                        "palaceofdarkness",
+                                                                        "pod_smallkey",
+                                                                        "pod_bigkey"
+                                                                    ],
+                                                                    [
+                                                                        "swamppalace",
+                                                                        "sp_smallkey",
+                                                                        "sp_bigkey"
+                                                                    ],
+                                                                    [
+                                                                        "skullwoods",
+                                                                        "sw_smallkey",
+                                                                        "sw_bigkey"
+                                                                    ],
+                                                                    [
+                                                                        "thievestown",
+                                                                        "tt_smallkey",
+                                                                        "tt_bigkey"
+                                                                    ],
+                                                                    [
+                                                                        "icepalace",
+                                                                        "ip_smallkey",
+                                                                        "ip_bigkey"
+                                                                    ],
+                                                                    [
+                                                                        "miserymire",
+                                                                        "mm_smallkey",
+                                                                        "mm_bigkey"
+                                                                    ],
+                                                                    [
+                                                                        "turtlerock",
+                                                                        "tr_smallkey",
+                                                                        "tr_bigkey"
+                                                                    ],
+                                                                    [
+                                                                        "",
+                                                                        "gt_smallkey",
+                                                                        "gt_bigkey"
+                                                                    ]
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "container",
+                        "margin": "0,5,0,0",
+                        "content": {
+                            "type": "recentpins",
+                            "h_alignment": "stretch",
+                            "v_alignment": "center",
+                            "orientation": "vertical",
+                            "compact": true,
+                            "num_items": 2
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

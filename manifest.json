@@ -1,0 +1,28 @@
+﻿{
+  "name": "EmoTracker Official ALTTPR Support",
+  "game_name": "A Link to the Past Randomizer",
+  "platform": "snes",
+  "package_version": "1.0.5.2",
+  "package_uid": "alttpr_emotracker_emosaru",
+  "author": "EmoSaru",
+  "variants": {
+    "standard": {
+      "display_name": "Standard Map Tracker"
+    },
+    "keysanity": {
+      "display_name": "Keysanity Map Tracker"
+    },
+    "inverted": {
+      "display_name": "Inverted - Standard Map Tracker"
+    },
+    "inverted_keysanity": {
+      "display_name": "Inverted - Keysanity Map Tracker"
+    },
+    "items_only": {
+      "display_name": "Item Tracker"
+    },
+    "items_only_keys": {
+      "display_name": "Item Tracker w/ Keys"
+    }
+  }
+}

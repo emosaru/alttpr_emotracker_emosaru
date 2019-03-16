@@ -1,0 +1,84 @@
+{
+    "tracker_broadcast": {
+        "type": "array",
+        "dropshadow": true,
+        "margin": "10",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "content": [
+                    {
+                        "type": "itemgrid",
+                        "h_alignment": "center",
+                        "item_margin": "4,5",
+                        "rows": [
+                            [
+                                "bowandarrows",
+                                "boomerangs",
+                                "hookshot",
+                                "bombs",
+                                "powder",
+                                "lift1",
+                                "owsword",
+                                "easternpalace"
+                            ],
+                            [
+                                "firerod",
+                                "icerod",
+                                "bombos",
+                                "ether",
+                                "quake",
+                                "boots",
+                                "shield",
+                                "desertpalace"
+                            ],
+                            [
+                                "lamp",
+                                "hammer",
+                                "ocarina",
+                                "book",
+                                "pearl",
+                                "flippers",
+                                "armor",
+                                "towerofhera"
+                            ],
+                            [
+                                "bottle",
+                                "somaria",
+                                "byrna",
+                                "cape",
+                                "mirror",
+                                "mushroom",
+                                "shovel",
+                                "aga"
+                            ],
+                            [
+                                "palaceofdarkness",
+                                "swamppalace",
+                                "skullwoods",
+                                "thievestown",
+                                "icepalace",
+                                "miserymire",
+                                "turtlerock",
+                                "gomode"
+                            ]
+                        ]
+                    },
+                    {
+                        "type": "container",
+                        "margin": "0,5,0,0",
+                        "content": {
+                            "type": "recentpins",
+                            "h_alignment": "stretch",
+                            "v_alignment": "center",
+                            "orientation": "vertical",
+                            "compact": true,
+                            "num_items": 2
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

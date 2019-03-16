@@ -1,0 +1,10 @@
+﻿[
+  {
+    "name": "lightworld",
+    "img": "images/lttp_lightworld.png"
+  },
+  {
+    "name": "darkworld",
+    "img": "images/lttp_darkworld.png"
+  }
+]

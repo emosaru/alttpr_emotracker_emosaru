@@ -1,0 +1,182 @@
+{
+    "shared_item_grid": {
+        "type": "itemgrid",
+        "h_alignment": "center",
+        "item_margin": "1,2",
+        "rows": [
+            [
+                "bowandarrows",
+                "boomerangs",
+                "hookshot",
+                "bombs",
+                "powder",
+                "mushroom",
+                "easternpalace"
+            ],
+            [
+                "firerod",
+                "icerod",
+                "bombos",
+                "ether",
+                "quake",
+                "shovel",
+                "desertpalace"
+            ],
+            [
+                "lamp",
+                "hammer",
+                "ocarina",
+                "net",
+                "book",
+                "pearl",
+                "towerofhera"
+            ],
+            [
+                "bottle",
+                "somaria",
+                "byrna",
+                "cape",
+                "mirror",
+                "gomode",
+                "aga"
+            ],
+            [
+                "lift1",
+                "boots",
+                "flippers",
+                "halfmagic",
+                "owsword",
+                "shield",
+                "armor"
+            ],
+            [
+                "palaceofdarkness",
+                "swamppalace",
+                "skullwoods",
+                "thievestown",
+                "icepalace",
+                "miserymire",
+                "turtlerock"
+            ]
+        ]
+    },
+    "tracker_capture_item": {
+        "type": "container",
+        "content": {
+            "type": "itemgrid",
+            "h_alignment": "center",
+            "item_margin": "1,2",
+            "rows": [
+                [
+                    "bow", "silvers", "", "hookshot", "powder", "mushroom", "blue_boomerang"
+                ],
+                [
+                    "firerod", "icerod", "bombos", "ether", "quake", "shovel", "red_boomerang"
+                ],
+                [
+                    "lamp", "hammer", "ocarina", "net", "book", "pearl", "generic_smallkey"
+                ],
+                [
+                    "bottle",
+                    "somaria",
+                    "byrna",
+                    "cape",
+                    "mirror",
+                    "",
+                    "generic_bigkey"
+                ],
+                [
+                    "lift1",
+                    "boots",
+                    "flippers",
+                    "halfmagic",
+                    "owsword",
+                    "shield",
+                    "armor"
+                ]
+            ]
+        }
+    },
+    "tracker_default": {
+        "type": "container",
+        "background": "#877373",
+        "content": {
+            "type": "dock",
+            "dropshadow": true,
+            "content": [
+                {
+                    "type": "dock",
+                    "dock": "left",
+                    "v_alignment": "stretch",
+                    "content": [
+                        {
+                            "type": "group",
+                            "header": "Items",
+                            "dock": "top",
+                            "content": {
+                                "type": "layout",
+                                "key": "shared_item_grid"
+                            }
+                        },
+                        {
+                            "type": "group",
+                            "header": "Pinned Locations",
+                            "content": {
+                                "type": "recentpins",
+                                "style": "wrap",
+                                "h_alignment": "stretch",
+                                "v_alignment": "stretch",
+                                "orientation": "vertical",
+                                "compact": true
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "map"
+                }
+            ]
+        }
+    },
+    "tracker_horizontal": {
+        "type": "container",
+        "background": "#877373",
+        "content": {
+            "type": "dock",
+            "dropshadow": true,
+            "content": [
+                {
+                    "type": "dock",
+                    "dock": "bottom",
+                    "content": [
+                        {
+                            "type": "group",
+                            "header": "Items",
+                            "margin": "0,0,3,0",
+                            "dock": "left",
+                            "content": {
+                                "type": "layout",
+                                "key": "shared_item_grid"
+                            }
+                        },
+                        {
+                            "type": "group",
+                            "header": "Pinned Locations",
+                            "content": {
+                                "type": "recentpins",
+                                "style": "wrap",
+                                "h_alignment": "stretch",
+                                "v_alignment": "stretch",
+                                "orientation": "horizontal",
+                                "compact": true
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "map"
+                }
+            ]
+        }
+    }
+}
