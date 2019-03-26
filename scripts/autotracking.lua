@@ -5,7 +5,6 @@ AUTOTRACKER_ENABLE_DEBUG_LOGGING = false
 print("")
 print("Active Auto-Tracker Configuration")
 print("---------------------------------------------------------------------")
-print("Respect Race Rom Guidelines: ", AUTOTRACKER_RESPECT_RACE_ROM_GUIDELINES)
 print("Enable Item Tracking:        ", AUTOTRACKER_ENABLE_ITEM_TRACKING)
 print("Enable Location Tracking:    ", AUTOTRACKER_ENABLE_LOCATION_TRACKING)
 if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
@@ -14,26 +13,13 @@ end
 print("---------------------------------------------------------------------")
 print("")
 
-AUTOTRACKER_RACE_WARNING_MARKDOWN_FORMAT = [===[
-### Racing With AutoTracking
-
-Race rom guideline enforcement is **disabled**. This means that...
-
-* Location tracking is enabled, even on race roms
-
-Make sure you are following the rules defined by the community for the environment in which you are playing.
-]===]
-
 function autotracker_started()
-    if not AUTOTRACKER_RESPECT_RACE_ROM_GUIDELINES and AUTOTRACKER_ENABLE_LOCATION_TRACKING then
-        ScriptHost:PushMarkdownNotification(NotificationType.Warning, AUTOTRACKER_RACE_WARNING_MARKDOWN_FORMAT)
-    end    
+    -- Invoked when the auto-tracker is activated/connected
 end
 
 AUTOTRACKER_IS_IN_GAME = false
 AUTOTRACKER_IS_IN_TRIFORCE_ROOM = false
 AUTOTRACKER_HAS_DONE_POST_GAME_SUMMARY = false
-AUTOTRACKER_IS_RACE_ROM = AUTOTRACKER_RESPECT_RACE_ROM_GUIDELINES
 
 U8_READ_CACHE = 0
 U8_READ_CACHE_ADDRESS = 0
@@ -64,16 +50,8 @@ function ReadU16(segment, address)
     return U16_READ_CACHE
 end
 
-function updateRaceRomCheckFromMemorySegment(segment)
-    if AUTOTRACKER_RESPECT_RACE_ROM_GUIDELINES then
-        AUTOTRACKER_IS_RACE_ROM = (segment:ReadUInt8(0x308213) > 0)
-    else
-        AUTOTRACKER_IS_RACE_ROM = false
-    end
-    return true
-end
-
 function updateInGameStatusFromMemorySegment(segment)
+
     local mainModuleIdx = segment:ReadUInt8(0x7e0010)
 
     AUTOTRACKER_IS_IN_GAME = (mainModuleIdx > 0x05)
@@ -310,7 +288,7 @@ function updateNPCItemFlagsFromMemorySegment(segment)
         return false
     end
 
-    if AUTOTRACKER_IS_RACE_ROM or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
+    if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
         return true
     end
 
@@ -341,7 +319,7 @@ function updateOverworldEventsFromMemorySegment(segment)
         return false
     end
 
-    if AUTOTRACKER_IS_RACE_ROM or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
+    if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
         return true
     end    
 
@@ -362,6 +340,7 @@ function updateOverworldEventsFromMemorySegment(segment)
 end
 
 function updateRoomsFromMemorySegment(segment)
+
     if not AUTOTRACKER_IS_IN_GAME then
         return false
     end
@@ -381,7 +360,7 @@ function updateRoomsFromMemorySegment(segment)
         updateToggleFromRoomSlot(segment, "tr", { 164, 11 })
     end
 
-    if AUTOTRACKER_IS_RACE_ROM or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
+    if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
         return true
     end    
 
@@ -494,7 +473,7 @@ function updateItemsFromMemorySegment(segment)
 
     end
 
-    if AUTOTRACKER_IS_RACE_ROM or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
+    if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
         return true
     end    
 
@@ -595,11 +574,8 @@ function updateStatisticsFromMemorySegment(segment)
     return true
 end
 
-if AUTOTRACKER_RESPECT_RACE_ROM_GUIDELINES then
-    ScriptHost:AddMemoryWatch("LTTP Race Rom Check", 0x308213, 0x02, updateRaceRomCheckFromMemorySegment)
-end
-
-ScriptHost:AddMemoryWatch("LTTP In-Game status", 0x7e0010, 0x90, updateInGameStatusFromMemorySegment)
+-- Run the in-game status check more frequently (every 250ms) to catch save/quit scenarios more effectively
+ScriptHost:AddMemoryWatch("LTTP In-Game status", 0x7e0010, 0x90, updateInGameStatusFromMemorySegment, 250)
 ScriptHost:AddMemoryWatch("LTTP Item Data", 0x7ef340, 0x90, updateItemsFromMemorySegment)
 ScriptHost:AddMemoryWatch("LTTP Room Data", 0x7ef000, 0x250, updateRoomsFromMemorySegment)
 ScriptHost:AddMemoryWatch("LTTP Overworld Event Data", 0x7ef280, 0x82, updateOverworldEventsFromMemorySegment)
