@@ -48,7 +48,6 @@
         "name": "Eastern Palace",
         "color": "#af0000",
         "access_rules": [ "[lamp]" ],
-        "completion_rules": [ "lift1,firesource,boots" ],
         "sections": [
             {
                 "name": "Dungeon",
@@ -75,7 +74,6 @@
         "name": "Desert Palace",
         "color": "#af0000",
         "access_rules": [ "book", "flute,lift2,mirror" ],
-        "completion_rules": [ "lift1,firesource,boots" ],
         "sections": [
             {
                 "name": "Dungeon",
