@@ -497,24 +497,24 @@
                 "name": "Turtle Rock",
                 "color": "#af0000",
                 "access_rules": [
-                    "mirror,hammer,lift2,tr_medallion,somaria,$canUseMedallions",
-                    "hookshot,hammer,lift2,tr_medallion,somaria,$canUseMedallions",
-                    "mirror,hammer,lift2,bombos,ether,quake,somaria,$canUseMedallions",
-                    "hookshot,hammer,lift2,bombos,ether,quake,somaria,$canUseMedallions"
+                    "pearl,mirror,hammer,lift2,tr_medallion,somaria,$canUseMedallions",
+                    "pearl,hookshot,hammer,lift2,tr_medallion,somaria,$canUseMedallions",
+                    "pearl,mirror,hammer,lift2,bombos,ether,quake,somaria,$canUseMedallions",
+                    "pearl,hookshot,hammer,lift2,bombos,ether,quake,somaria,$canUseMedallions"
                 ],
                 "sections": [
                     {
                         "name": "Dungeon",
                         "clear_as_group": false,
                         "access_rules": [
-                            "[firerod],[lamp],[tr_smallkey:3],[tr_bigkey]"
+                            "[firerod],[lamp],[tr_smallkey:4],[tr_bigkey]"
                         ],
                         "item_count": 11
                     },
                     {
                         "name": "Trinexx",
                         "access_rules": [
-                            "firerod,icerod,tr_bigkey,tr_smallkey:3,[lamp]"
+                            "firerod,icerod,tr_bigkey,tr_smallkey:3,[tr_smallkey:4],[lamp]"
                         ],
                         "hosted_item": "turtlerock",
                         "item_count": 1
@@ -526,33 +526,36 @@
                         "x": 1890,
                         "y": 144
                     }
-                ],
-                "children": [
-                    {
-                        "name": "Mimic Cave",
-                        "color": "#934f17",
-                        "access_rules": [ "mirror,hammer,@Turtle Rock/Dungeon" ],
-                        "sections": [
-                            {
-                                "name": "Cave",
-                                "item_count": 1
-                            }
-                        ],
-                        "map_locations": [
-                            {
-                                "map": "lightworld",
-                                "x": 1694,
-                                "y": 190
-                            },
-                            {
-                                "map": "darkworld",
-                                "x": 1693,
-                                "y": 205
-                            }
-                        ]
-                    }                    
-                ]                
+                ]
             },
+            {
+                "name": "Mimic Cave",
+                "color": "#934f17",
+                "access_rules": [
+                    "pearl,mirror,hammer,lift2,tr_medallion,somaria,$canUseMedallions,tr_smallkey:2",
+                    "pearl,hookshot,hammer,lift2,tr_medallion,somaria,$canUseMedallions,mirror,tr_smallkey:2",
+                    "pearl,mirror,hammer,lift2,bombos,ether,quake,somaria,$canUseMedallions,tr_smallkey:2",
+                    "pearl,hookshot,hammer,lift2,bombos,ether,quake,somaria,$canUseMedallions,mirror,tr_smallkey:2"
+                ],
+                "sections": [
+                    {
+                        "name": "Cave",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "lightworld",
+                        "x": 1694,
+                        "y": 190
+                    },
+                    {
+                        "map": "darkworld",
+                        "x": 1693,
+                        "y": 205
+                    }
+                ]
+            },            
             //  Ganon's Tower
             {
                 "name": "Ganon's Tower",

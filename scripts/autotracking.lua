@@ -17,7 +17,6 @@ function autotracker_started()
     -- Invoked when the auto-tracker is activated/connected
 end
 
-AUTOTRACKER_IS_IN_GAME = false
 AUTOTRACKER_IS_IN_TRIFORCE_ROOM = false
 AUTOTRACKER_HAS_DONE_POST_GAME_SUMMARY = false
 
@@ -50,11 +49,13 @@ function ReadU16(segment, address)
     return U16_READ_CACHE
 end
 
+function isInGame()
+    return AutoTracker:ReadU8(0x7e0010, 0) > 0x05
+end
+
 function updateInGameStatusFromMemorySegment(segment)
 
     local mainModuleIdx = segment:ReadUInt8(0x7e0010)
-
-    AUTOTRACKER_IS_IN_GAME = (mainModuleIdx > 0x05)
 
     local wasInTriforceRoom = AUTOTRACKER_IS_IN_TRIFORCE_ROOM
     AUTOTRACKER_IS_IN_TRIFORCE_ROOM = (mainModuleIdx == 0x19 or mainModuleIdx == 0x1a)
@@ -64,10 +65,10 @@ function updateInGameStatusFromMemorySegment(segment)
     end
 
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-        -- if AUTOTRACKER_IS_IN_GAME then
+        if mainModuleIdx > 0x05 then
             print("Current Room Index: ", segment:ReadUInt16(0x7e00a0))
             print("Current OW   Index: ", segment:ReadUInt16(0x7e008a))
-        -- end
+        end
         return false
     end
 
@@ -284,7 +285,7 @@ end
 
 function updateNPCItemFlagsFromMemorySegment(segment)
 
-    if not AUTOTRACKER_IS_IN_GAME then
+    if not isInGame() then
         return false
     end
 
@@ -315,7 +316,8 @@ function updateNPCItemFlagsFromMemorySegment(segment)
 end
 
 function updateOverworldEventsFromMemorySegment(segment)
-    if not AUTOTRACKER_IS_IN_GAME then
+    
+    if not isInGame() then
         return false
     end
 
@@ -341,7 +343,7 @@ end
 
 function updateRoomsFromMemorySegment(segment)
 
-    if not AUTOTRACKER_IS_IN_GAME then
+    if not isInGame() then
         return false
     end
 
@@ -407,7 +409,7 @@ end
 
 function updateItemsFromMemorySegment(segment)
 
-    if not AUTOTRACKER_IS_IN_GAME then
+    if not isInGame() then
         return false
     end
 
@@ -487,7 +489,8 @@ function updateItemsFromMemorySegment(segment)
 end
 
 function updateHeartPiecesFromMemorySegment(segment)
-    if not AUTOTRACKER_IS_IN_GAME then
+
+    if not isInGame() then
         return false
     end
 
@@ -499,7 +502,8 @@ function updateHeartPiecesFromMemorySegment(segment)
 end
 
 function updateHeartContainersFromMemorySegment(segment)
-    if not AUTOTRACKER_IS_IN_GAME then
+
+    if not isInGame() then
         return false
     end
 
@@ -551,7 +555,8 @@ function read32BitTimer(segment, baseAddress)
 end
 
 function updateStatisticsFromMemorySegment(segment)
-    if not AUTOTRACKER_IS_IN_GAME then
+
+    if not isInGame() then
         return false
     end
 
