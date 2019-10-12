@@ -18,6 +18,7 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
     Tracker:AddLocations("locations/dungeons.json")    
 end
 
+Tracker:AddLayouts("layouts/items.json")
 Tracker:AddLayouts("layouts/tracker.json")
 
 -- Select a broadcast view layout based on whether the current variant is keysanity or not

@@ -19,7 +19,7 @@
             {
                 "name": "Escape",
                 "clear_as_group": false,
-                "access_rules": [ "[lamp],[lift1]" ],
+                "access_rules": [ "[lamp],[lift1]", "[firerod],[lift1],item_placement_advanced" ],
                 "item_count": 6
             }
         ]
@@ -47,7 +47,6 @@
     {
         "name": "Eastern Palace",
         "color": "#af0000",
-        "access_rules": [ "[lamp]" ],
         "sections": [
             {
                 "name": "Dungeon",
@@ -57,7 +56,7 @@
             },
             {
                 "name": "Armos",
-                "access_rules": [ "bow,[lamp]" ],
+                "access_rules": [ "bow,[lamp]", "bow,[firerod],item_placement_advanced" ],
                 "hosted_item": "easternpalace"
             }
         ],
@@ -299,7 +298,8 @@
                 "name": "Dungeon",
                 "clear_as_group": false,
                 "access_rules": [
-                    "[hammer],[hookshot],[somaria]"
+                    "[hammer],[hookshot]",
+                    "[hammer],[hookshot],[somaria],item_placement_advanced"
                 ],
                 "item_count": 3
             },
@@ -327,10 +327,12 @@
         "color": "#af0000",
         "parent": "Mire Area",
         "access_rules": [
-            "$canUseMedallions,moonpearl,mm_medallion,hookshot",
-            "$canUseMedallions,moonpearl,mm_medallion,boots",
-            "$canUseMedallions,moonpearl,bombos,ether,quake,hookshot",
-            "$canUseMedallions,moonpearl,bombos,ether,quake,boots"
+            "moonpearl,mm_medallion,hookshot,$canUseMedallions",
+            "moonpearl,bombos,ether,quake,hookshot,$canUseMedallions",
+            "moonpearl,mm_medallion,boots,[hookshot],$canUseMedallions",
+            "moonpearl,bombos,ether,quake,boots,[hookshot],$canUseMedallions",
+            "moonpearl,mm_medallion,boots,$canUseMedallions,item_placement_advanced",
+            "moonpearl,bombos,ether,quake,boots,$canUseMedallions,item_placement_advanced"
         ],
         "sections": [
             //  Front
@@ -418,7 +420,10 @@
                         "name": "Dungeon",
                         "clear_as_group": false,
                         "access_rules": [
-                            "[firerod],[lamp]"
+                            "[firerod],[lamp],item_placement_advanced",
+                            "[firerod],[lamp],[cape]",
+                            "[firerod],[lamp],[byrna]",
+                            "[firerod],[lamp],[mirrorshield]"
                         ],
                         "item_count": 5
                     },
@@ -467,9 +472,27 @@
             {
                 "name": "Ganon's Tower",
                 "color": "#af0000",
-                "access_rules": [
-                    "mirror,hammer,lift2,crystal:7",
-                    "hookshot,hammer,lift2,crystal:7"
+                "parent": "Dark Death Mountain",
+                "access_rules": [ "pearl,$gtCrystalCount" ],
+                "sections": [
+                    {
+                        "name": "Dungeon",
+                        "clear_as_group": false,
+                        "access_rules": [
+                            "hammer,[firerod],[hookshot],[boots],[somaria]",
+                            "[hammer],[firerod],[hookshot],boots,[somaria]",
+                            "[hammer],[firerod],[hookshot],[boots],somaria"
+                        ],
+                        "item_count": 23
+                    },
+                    {
+                        "name": "Tower",
+                        "clear_as_group": false,
+                        "access_rules": [
+                            "bow,firesource,[hookshot]"
+                        ],
+                        "item_count": 4
+                    }
                 ],
                 "map_locations": [
                     {

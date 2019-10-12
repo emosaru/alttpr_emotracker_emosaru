@@ -29,7 +29,7 @@
                 "clear_as_group": true,
                 "access_rules": [
                     "lift1",
-                    "hc_smallkey:1"
+                    "hc_smallkey:1,[lamp]"
                 ],
                 "item_count": 3
             },
@@ -91,7 +91,8 @@
             {
                 "name": "Armos",
                 "access_rules": [
-                    "ep_bigkey,bow,[lamp]"
+                    "ep_bigkey,bow,[lamp]",
+                    "ep_bigkey,bow,[firerod],item_placement_advanced",
                 ],
                 "item_count": 1,
                 "hosted_item": "easternpalace"
@@ -163,7 +164,7 @@
                 "clear_as_group": false,
                 "access_rules": [
                     "[lamp],[pod_bigkey],[pod_smallkey:5],bow",
-                    "[lamp],[pod_bigkey],[pod_smallkey:6]"
+                    "[lamp],[pod_bigkey],[pod_smallkey:6],[bow]"
                 ],
                 "item_count": 13
             },
@@ -373,8 +374,8 @@
             {
                 "name": "Khold",
                 "access_rules": [
-                    "hammer,bombos,$canUseMedallions,[somaria]",
-                    "hammer,firerod,[somaria]",
+                    "hammer,bombos,$canUseMedallions,[somaria],item_placement_advanced",
+                    "hammer,firerod,[somaria],item_placement_advanced",
                     "hammer,bombos,$canUseMedallions,[ip_smallkey:1]",
                     "hammer,firerod,[ip_smallkey:1]"
                 ],
@@ -405,9 +406,11 @@
                 "color": "#af0000",
                 "access_rules": [
                     "moonpearl,mm_medallion,hookshot,$canUseMedallions",
-                    "moonpearl,mm_medallion,boots,$canUseMedallions",
                     "moonpearl,bombos,ether,quake,hookshot,$canUseMedallions",
-                    "moonpearl,bombos,ether,quake,boots,$canUseMedallions"
+                    "moonpearl,mm_medallion,boots,[hookshot],$canUseMedallions",
+                    "moonpearl,bombos,ether,quake,boots,[hookshot],$canUseMedallions",
+                    "moonpearl,mm_medallion,boots,$canUseMedallions,item_placement_advanced",
+                    "moonpearl,bombos,ether,quake,boots,$canUseMedallions,item_placement_advanced"
                 ],
                 "sections": [
                     //  Front
@@ -507,7 +510,10 @@
                         "name": "Dungeon",
                         "clear_as_group": false,
                         "access_rules": [
-                            "[firerod],[lamp],[tr_smallkey:4],[tr_bigkey]"
+                            "[firerod],[lamp],[tr_smallkey:4],[tr_bigkey],item_placement_advanced",
+                            "[firerod],[lamp],[tr_smallkey:4],[tr_bigkey],[cape]]",
+                            "[firerod],[lamp],[tr_smallkey:4],[tr_bigkey],[byrna]",
+                            "[firerod],[lamp],[tr_smallkey:4],[tr_bigkey],[mirrorshield]"
                         ],
                         "item_count": 11
                     },
@@ -560,16 +566,16 @@
             {
                 "name": "Ganon's Tower",
                 "color": "#af0000",
-                "access_rules": [
-                    "mirror,hammer,lift2,crystal:7",
-                    "hookshot,hammer,lift2,crystal:7"
-                ],
+                "parent": "Dark Death Mountain",
+                "access_rules": [ "pearl,$gtCrystalCount" ],
                 "sections": [
                     {
                         "name": "Dungeon",
                         "clear_as_group": false,
                         "access_rules": [
-                            "[firerod],[hookshot],[boots],[somaria],[gt_smallkey:2],[gt_bigkey]"
+                            "hammer,[firerod],[hookshot],[boots],[somaria],[gt_smallkey:2],[gt_bigkey]",
+                            "[hammer],[firerod],[hookshot],boots,[somaria],[gt_smallkey:2],[gt_bigkey]",
+                            "[hammer],[firerod],[hookshot],[boots],somaria,[gt_smallkey:2],[gt_bigkey]"
                         ],
                         "item_count": 23
                     },

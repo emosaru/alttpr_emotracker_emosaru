@@ -1,25 +1,46 @@
 [
-    // Bow
+    // Bow and Arrows
+    {
+        "name": "Bow and Arrows",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+          {
+            "img": "images/bow.png",
+            "img_mods": "@disabled",
+            "codes": "bowandarrows"
+          },            
+          {
+            "img": "images/bow.png",
+            "codes": "bow"
+          },
+          {
+            "img": "images/bowandsilverarrow.png",
+            "codes": "silvers,silverarrows"
+          }
+        ]
+      },    
+    // Legacy Bow
     {
       "name": "Bow",
       "type": "toggle",
       "img": "images/0000.png",
-      "codes": "bow"
+      "codes": "np_bow, bow"
     },
-    // Silver Arrows
+    // Legacy Silver Arrows
     {
       "name": "Silver Arrows",
       "type": "toggle",
       "img": "images/silver_arrow.png",
-      "codes": "silverarrows,silvers"
+      "codes": "np_silverarrows,np_silvers,silverarrows,silvers"
     },
-    // Bow + Silvers
+    // Legacy Bow + Silvers
     {
       "name": "Bow and Arrows",
       "type": "composite_toggle",
-      "codes": "bowandarrows",
-      "item_left": "bow",
-      "item_right": "silvers",
+      "codes": "np_bowandarrows",
+      "item_left": "np_bow",
+      "item_right": "np_silvers",
       "images": [
         {
           "left": false,
@@ -48,6 +69,7 @@
     {
       "name": "Bombs",
       "type": "progressive_toggle",
+      "initial_stage_idx": 0,
       "stages": [
         {
           "img": "images/0003.png",
@@ -538,5 +560,43 @@
         "img": "images/0060.png",
         "codes": "heartcontainer",
         "max_quantity": 11
+    },
+    // GT Required Crystals
+    {
+        "name": "GT Required Crystals",
+        "type": "consumable",
+        "img": "images/gt_crystals.png",
+        "codes": "gt_crystals",
+        "swap_actions" :true,
+        "max_quantity": 7,
+        "initial_quantity": 7
+    },
+    // Ganon Required Crystals
+    {
+        "name": "Ganon Required Crystals",
+        "type": "consumable",
+        "img": "images/ganon_crystals.png",
+        "codes": "ganon_crystals",
+        "swap_actions" :true,
+        "max_quantity": 7,
+        "initial_quantity": 7
+    },        
+    // Placement Modes
+    {
+        "name": "Item Placement Mode",
+        "type": "progressive",
+        "allow_disabled": false,
+        "initial_stage_idx": 1,
+        "loop": true,
+        "stages": [
+          {
+            "img": "images/item_placement_basic.png",
+            "codes": "item_placement_mode,item_placement_basic"
+          },
+          {
+            "img": "images/item_placement_advanced.png",
+            "codes": "item_placement_mode,item_placement_advanced"
+          }
+        ]
     }    
   ]

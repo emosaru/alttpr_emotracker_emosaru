@@ -93,6 +93,28 @@ function updateAga1(segment)
     end
 end
 
+function testFlag(segment, address, flag)
+    local value = ReadU8(segment, address)
+    local flagTest = value & flag
+
+    if flagTest ~= 0 then
+        return true
+    else
+        return false
+    end    
+end
+
+function updateProgressiveBow(segment)
+    local item = Tracker:FindObjectForCode("bowandarrows")    
+    if testFlag(segment, 0x7ef38e, 0x40) then
+        item.CurrentStage = 2
+    elseif testFlag(segment, 0x7ef38e, 0x80) then
+        item.CurrentStage = 1
+    else
+        item.CurrentStage = 0
+    end
+end
+
 function updateBottles(segment)
     local item = Tracker:FindObjectForCode("bottle")    
     local count = 0
@@ -445,12 +467,13 @@ function updateItemsFromMemorySegment(segment)
         updateToggleItemFromByteAndFlag(segment, "blue_boomerang", 0x7ef38c, 0x80)
         updateToggleItemFromByteAndFlag(segment, "red_boomerang",  0x7ef38c, 0x40)
         updateToggleItemFromByteAndFlag(segment, "powder", 0x7ef38c, 0x10)
-        updateToggleItemFromByteAndFlag(segment, "bow", 0x7ef38e, 0x80)
-        updateToggleItemFromByteAndFlag(segment, "silvers", 0x7ef38e, 0x40)
+        updateToggleItemFromByteAndFlag(segment, "np_bow", 0x7ef38e, 0x80)
+        updateToggleItemFromByteAndFlag(segment, "np_silvers", 0x7ef38e, 0x40)
 
         updatePseudoProgressiveItemFromByteAndFlag(segment, "mushroom", 0x7ef38c, 0x20)
         updatePseudoProgressiveItemFromByteAndFlag(segment, "shovel", 0x7ef38c, 0x04)
 
+        updateProgressiveBow(segment)
         updateBottles(segment)
         updateFlute(segment)
         updateAga1(segment)

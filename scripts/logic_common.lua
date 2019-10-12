@@ -34,3 +34,25 @@ function canClearAgaTowerBarrier()
         return Tracker:ProviderCountForCode("sword2")
     end    
 end
+
+function gtCrystalCount()
+    local reqCount = Tracker:ProviderCountForCode("gt_crystals")
+    local count = Tracker:ProviderCountForCode("crystal")
+
+    if count >= reqCount then
+        return 1
+    else
+        return 0
+    end
+end
+
+function ganonCrystalCount()
+    local reqCount = Tracker:ProviderCountForCode("ganon_crystals")
+    local count = Tracker:ProviderCountForCode("crystal")
+
+    if count >= reqCount then
+        return 1
+    else
+        return 0
+    end
+end

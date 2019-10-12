@@ -369,7 +369,27 @@
         "name": "Ganon's Tower",
         "color": "#af0000",
         "parent": "Lower Light World",
-        "access_rules": [ "crystal:7" ],
+        "access_rules": [ "$gtCrystalCount" ],
+        "sections": [
+            {
+                "name": "Dungeon",
+                "clear_as_group": false,
+                "access_rules": [
+                    "hammer,[firerod],[hookshot],[boots],[somaria]",
+                    "[hammer],[firerod],[hookshot],boots,[somaria]",
+                    "[hammer],[firerod],[hookshot],[boots],somaria"
+                ],
+                "item_count": 22
+            },
+            {
+                "name": "Tower",
+                "clear_as_group": false,
+                "access_rules": [
+                    "bow,firesource,[hookshot]"
+                ],
+                "item_count": 4
+            }
+        ],        
         "map_locations": [
             {
                 "map": "lightworld",

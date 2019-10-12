@@ -12,7 +12,7 @@
       },
       {
         "img": "images/0106.png",
-        "codes": "ep,easternpalace,crystal56",
+        "codes": "ep,easternpalace,crystal,crystal56",
         "secondary_codes": "crystal five six, red crystal, fairy crystal"
       },
       {
@@ -40,7 +40,7 @@
       },
       {
         "img": "images/0110.png",
-        "codes": "dp,desertpalace,crystal56",
+        "codes": "dp,desertpalace,crystal,crystal56",
         "secondary_codes": "crystal five six, red crystal, fairy crystal"
       },
       {
@@ -68,7 +68,7 @@
       },
       {
         "img": "images/0114.png",
-        "codes": "toh,towerofhera,crystal56",
+        "codes": "toh,towerofhera,crystal,crystal56",
         "secondary_codes": "crystal five six, red crystal, fairy crystal"
       },
       {
@@ -96,7 +96,7 @@
       },
       {
         "img": "images/0078.png",
-        "codes": "pod,palaceofdarkness,crystal56",
+        "codes": "pod,palaceofdarkness,crystal,crystal56",
         "secondary_codes": "crystal five six, red crystal, fairy crystal"
       },
       {
@@ -124,7 +124,7 @@
       },
       {
         "img": "images/0082.png",
-        "codes": "sp,swamppalace,crystal56",
+        "codes": "sp,swamppalace,crystal,crystal56",
         "secondary_codes": "crystal five six, red crystal, fairy crystal"
       },
       {
@@ -152,7 +152,7 @@
       },
       {
         "img": "images/0086.png",
-        "codes": "sw,skullwoods,crystal56",
+        "codes": "sw,skullwoods,crystal,crystal56",
         "secondary_codes": "crystal five six, red crystal, fairy crystal"
       },
       {
@@ -180,7 +180,7 @@
       },
       {
         "img": "images/0090.png",
-        "codes": "tt,thievestown,crystal56",
+        "codes": "tt,thievestown,crystal,crystal56",
         "secondary_codes": "crystal five six, red crystal, fairy crystal"
       },
       {
@@ -208,7 +208,7 @@
       },
       {
         "img": "images/0094.png",
-        "codes": "ip,icepalace,crystal56",
+        "codes": "ip,icepalace,crystal,crystal56",
         "secondary_codes": "crystal five six, red crystal, fairy crystal"
       },
       {
@@ -236,7 +236,7 @@
       },
       {
         "img": "images/0098.png",
-        "codes": "mm,miserymire,crystal56",
+        "codes": "mm,miserymire,crystal,crystal56",
         "secondary_codes": "crystal five six, red crystal, fairy crystal"
       },
       {
@@ -264,7 +264,7 @@
       },
       {
         "img": "images/0102.png",
-        "codes": "tr,turtlerock,crystal56",
+        "codes": "tr,turtlerock,crystal,crystal56",
         "secondary_codes": "crystal five six, red crystal, fairy crystal"
       },
       {

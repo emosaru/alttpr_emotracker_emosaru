@@ -28,7 +28,7 @@
                   {
                     "name": "Pedestal",
                     "capture_item": true,
-                    "access_rules": [ "greenpendant,pendant:2", "{book}" ],
+                    "access_rules": [ "greenpendant,pendant:2,item_placement_advanced", "greenpendant,pendant:2,[book]", "{book}" ],
                     "item_count": 1
                   }
                 ]
@@ -549,7 +549,7 @@
                     "y": 347
                   }
                 ]
-              },
+              }
             ]
           },
     
@@ -776,7 +776,7 @@
               {
                 "name": "Dwarven Smiths",
                 "short_name": "Smiths",
-                "access_rules": [ "lift2" ],
+                "access_rules": [ "lift2,item_placement_advanced", "lift2,[mirror]" ],
                 "sections": [
                   {
                     "name": "Bring Him Home",
@@ -847,7 +847,7 @@
               {
                 "name": "Ledge",
                 "capture_item": true,
-                "access_rules": [ "lift1,cape", "{}" ],
+                "access_rules": [ "lift1,cape,[hookshot]", "lift1,cape,item_placement_advanced", "{}" ],
                 "item_count": 1
               }
             ],
@@ -1210,7 +1210,7 @@
                       {
                         "name": "Bonkable Chest",
                         "short_name": "Front",
-                        "access_rules": [ "boots", "hookshot" ],
+                        "access_rules": [ "boots,item_placement_advanced", "hookshot", "[hookshot],boots" ],
                         "item_count": 1
                       },
                       //  Back Chests
