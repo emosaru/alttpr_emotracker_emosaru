@@ -346,6 +346,9 @@
                 ],
                 "map_locations": [
                   {
+                    "force_visibility_rules": [ "bow" ],
+                    "force_invisibility_rules": [ "sword" ],
+                    "restrict_visibility_rules": [ "bomb" ],
                     "map": "darkworld",
                     "x": 940,
                     "y": 976

@@ -1,17 +1,4 @@
 {
-    "shared_item_grid": {
-        "type": "itemgrid",
-        "h_alignment": "center",
-        "item_margin": "1,2",
-        "rows": [
-            [ "bowandarrows", "boomerangs", "hookshot", "bombs", "powder", "mushroom", "easternpalace" ],
-            [ "firerod", "icerod", "bombos", "ether", "quake", "shovel", "desertpalace" ],
-            [ "lamp", "hammer", "ocarina", "net", "book", "pearl", "towerofhera" ],
-            [ "bottle", "somaria", "byrna", "cape", "mirror", "gomode", "aga" ],
-            [ "lift1", "boots", "flippers", "halfmagic", "owsword", "shield", "armor" ],
-            [ "palaceofdarkness", "swamppalace", "skullwoods", "thievestown", "icepalace", "miserymire", "turtlerock" ],
-        ]
-    },
     "tracker_capture_item": {
         "type": "container",
         "content": {
@@ -21,12 +8,12 @@
     },
     "tracker_default": {
         "type": "container",
-        "width": 270,
+        "width": 300,
         //"height": 250,
         "background": "#212121",
         "content": {
             "dropshadow": true,
-            "margin": 5,
+            "margin": "5",
             "type": "layout",
             "key": "shared_item_grid"
         }

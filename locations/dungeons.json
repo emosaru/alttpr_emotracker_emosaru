@@ -479,7 +479,7 @@
                         "name": "Dungeon",
                         "clear_as_group": false,
                         "access_rules": [
-                            "hammer,[firerod],[hookshot],[boots],[somaria]",
+                            "[hammer],[firerod],[hookshot],[boots],[somaria]",
                             "[hammer],[firerod],[hookshot],boots,[somaria]",
                             "[hammer],[firerod],[hookshot],[boots],somaria"
                         ],
@@ -489,7 +489,7 @@
                         "name": "Tower",
                         "clear_as_group": false,
                         "access_rules": [
-                            "bow,firesource,[hookshot]"
+                            "[bow],firesource,[hookshot]"
                         ],
                         "item_count": 4
                     }

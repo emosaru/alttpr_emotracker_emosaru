@@ -470,7 +470,7 @@
                 "name": "Dungeon",
                 "clear_as_group": false,
                 "access_rules": [
-                    "hammer,[firerod],[hookshot],[boots],[somaria],[gt_smallkey:2],[gt_bigkey]",
+                    "[hammer],[firerod],[hookshot],[boots],[somaria],[gt_smallkey:2],[gt_bigkey]",
                     "[hammer],[firerod],[hookshot],boots,[somaria],[gt_smallkey:2],[gt_bigkey]",
                     "[hammer],[firerod],[hookshot],[boots],somaria,[gt_smallkey:2],[gt_bigkey]"
                 ],
@@ -480,7 +480,7 @@
                 "name": "Tower",
                 "clear_as_group": false,
                 "access_rules": [
-                    "bow,firesource,[hookshot],gt_bigkey,gt_smallkey:1"
+                    "[bow],firesource,[hookshot],gt_bigkey,gt_smallkey:1"
                 ],
                 "item_count": 4
             }
