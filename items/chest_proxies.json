@@ -1,0 +1,86 @@
+[
+    // EP Chests
+    {
+        "name": "Eastern Palace Chests",
+        "type": "sectionchests",
+        "codes": "ep_chests",
+        "section": "@Eastern Palace/Dungeon"
+    },
+    // DP Chests
+    {
+        "name": "Desert Palace Chests",
+        "type": "sectionchests",
+        "codes": "dp_chests",
+        "section": "@Desert Palace/Dungeon"
+    },
+    // TOH Chests
+    {
+        "name": "Tower of Hera Chests",
+        "type": "sectionchests",
+        "codes": "toh_chests",
+        "section": "@Tower of Hera/Dungeon"
+    },
+    // POD Chests
+    {
+        "name": "Palace of Darkness Chests",
+        "type": "sectionchests",
+        "codes": "pod_chests",
+        "section": "@Palace of Darkness/Dungeon"
+    },
+    // SP Chests
+    {
+        "name": "Swamp Palace Chests",
+        "type": "sectionchests",
+        "codes": "sp_chests",
+        "section": "@Swamp Palace/Dungeon"
+    },
+    // SW Chests
+    {
+        "name": "Skull Woods Chests",
+        "type": "sectionchests",
+        "codes": "sw_chests",
+        "section": "@Skull Woods/Dungeon"
+    },
+    // TT Chests
+    {
+        "name": "Thieves Town Chests",
+        "type": "sectionchests",
+        "codes": "tt_chests",
+        "section": "@Thieves Town/Dungeon"
+    },
+    // IP Chests
+    {
+        "name": "Ice Palace Chests",
+        "type": "sectionchests",
+        "codes": "ip_chests",
+        "section": "@Ice Palace/Dungeon"
+    },
+    // MM Chests
+    {
+        "name": "Misery Mire Chests",
+        "type": "sectionchests",
+        "codes": "mm_chests",
+        "section": "@Misery Mire/Dungeon"
+    },
+    // TR Chests
+    {
+        "name": "Turtle Rock Chests",
+        "type": "sectionchests",
+        "codes": "tr_chests",
+        "section": "@Turtle Rock/Dungeon"
+    },
+    // GT Chests
+    {
+        "name": "Ganon's Tower Basement Chests",
+        "type": "sectionchests",
+        "codes": "gt_basement_chests",
+        "section": "@Ganon's Tower/Dungeon"
+    },
+    // GT Chests
+    {
+        "name": "Ganon's Tower Climb Chests",
+        "type": "sectionchests",
+        "codes": "gt_climb_chests",
+        "section": "@Ganon's Tower/Tower"
+    }    
+  ]
