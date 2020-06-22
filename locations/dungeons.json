@@ -108,7 +108,6 @@
     {
         "name": "Eastern Dark World",
         "color": "#35046b",
-        "group": "Eastern Hyrule",
         "access_rules": [
             "aga1,moonpearl",
             "hammer,lift1,moonpearl",
@@ -154,13 +153,11 @@
     //  Swamp Area
     {
         "name": "Swamp Area",
-        "group": "Swamp Area",
         "color": "#0d8452",
         "children": [
             //  Dark Swamp Area
             {
                 "name": "Dark Swamp Area",
-                "group": "Swamp Area",
                 "access_rules": [
                     "pearl, lift2",
                     "pearl, hammer,lift1",
@@ -212,7 +209,6 @@
     {
         "name": "Northwest Dark World",
         "color": "#35046b",
-        "group": "Lost Woods",
         "access_rules": [
             "aga1,hookshot,flippers,moonpearl",
             "aga1,hookshot,lift1,moonpearl",
@@ -364,7 +360,6 @@
     //  Death Mountain
     {
         "name": "Death Mountain",
-        "group": "Death Mountain",
         "color": "#934f17",
         "access_rules": [
             "lift1,[lamp]",

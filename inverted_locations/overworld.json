@@ -184,7 +184,6 @@
             },
             {
                 "name": "Bombos Tablet",
-                "group": "Desert Area",
                 "color": "#d9af22",
                 "sections": [
                     {
@@ -251,12 +250,10 @@
                     },                    
                     {
                         "name": "Northwest Hyrule",
-                        "group": "Lost Woods",
                         "children": [
                             //  Kakariko
                             {
                                 "name": "Kakariko Village",
-                                "group": "Kakariko Area",
                                 "children": [
                                     {
                                         "name": "Blind's House",
@@ -374,7 +371,6 @@
                     //  Central Hyrule
                     {
                         "name": "Central Hyrule",
-                        "group": "Central Hyrule",
                         "children": [
                             {
                                 "name": "Castle Secret Entrance",
@@ -439,7 +435,6 @@
                     //  Northeast Hyrule
                     {
                         "name": "Northeast Hyrule",
-                        "group": "Northeast Hyrule",
                         "children": [
                             //  Witch
                             {
@@ -518,7 +513,6 @@
                     //  North Hyrule
                     {
                         "name": "North Hyrule",
-                        "group": "North Hyrule",
                         "color": "#059134",
                         "children": [
                             //  Bonk Rocks
@@ -580,7 +574,6 @@
                     //  Desert Area
                     {
                         "name": "Desert Area",
-                        "group": "Desert Area",
                         "color": "#d9af22",
                         "children": [
                             {
@@ -645,7 +638,6 @@
                     {
                         "name": "Lake Hylia",
                         "color": "#345a99",
-                        "group": "Lake Hylia",
                         "children": [
                             {
                                 "name": "Mini Moldorm Cave",

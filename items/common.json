@@ -1,7 +1,7 @@
 [
     // Bow and Arrows
     {
-        "name": "Bow and Arrows",
+        "name": "Bow",
         "type": "progressive",
         "allow_disabled": false,
         "stages": [
@@ -20,51 +20,6 @@
           }
         ]
       },    
-    // Legacy Bow
-    {
-      "name": "Bow",
-      "type": "toggle",
-      "img": "images/0000.png",
-      "codes": "np_bow, bow"
-    },
-    // Legacy Silver Arrows
-    {
-      "name": "Silver Arrows",
-      "type": "toggle",
-      "img": "images/silver_arrow.png",
-      "codes": "np_silverarrows,np_silvers,silverarrows,silvers"
-    },
-    // Legacy Bow + Silvers
-    {
-      "name": "Bow and Arrows",
-      "type": "composite_toggle",
-      "codes": "np_bowandarrows",
-      "item_left": "np_bow",
-      "item_right": "np_silvers",
-      "images": [
-        {
-          "left": false,
-          "right": false,
-          "img": "images/bow.png",
-          "img_mods": "@disabled"
-        },
-        {
-          "left": true,
-          "right": false,
-          "img": "images/bow.png"
-        },
-        {
-          "left": false,
-          "right": true,
-          "img": "images/bowandsilverarrowdisabled.png"
-        },
-        {
-          "left": true,
-          "right": true,
-          "img": "images/bowandsilverarrow.png"
-        }
-      ]
-    },
     // Bombs
     {
       "name": "Bombs",
@@ -179,20 +134,24 @@
     },
     // Mushroom
     {
-      "name": "Mushroom",
-      "type": "progressive",
-      "stages": [
-        {
-          "img": "images/0004.png",
-          "codes": "mushroom"
-        },
-        {
-          "inherit_codes": false,
-          "img": "images/0056.png"
-        }
-      ]
+        "name": "Mushroom",
+        "type": "progressive_toggle",
+        "stages": [
+            {
+                "img": "images/0004.png",
+                "codes": "mushroom",
+                "secondary_codes": "none,default,clear"
+            },
+            {
+                "img": "images/0004.png",
+                "img_mods": "overlay|images/overlay_witch.png",
+                "disabled_img": "images/0004.png",
+                "disabled_img_mods": "@disabled,overlay|images/overlay_witch.png",
+                "codes": "mushroom",
+                "secondary_codes": "witch, used"
+            }
+        ]
     },
-  
     // Fire Rod
     {
       "name": "Fire Rod",
@@ -289,23 +248,26 @@
         }
       ]
     },
-  
     // Shovel
     {
-      "name": "Shovel",
-      "type": "progressive",
-      "stages": [
-        {
-          "img": "images/0012.png",
-          "codes": "shovel"
-        },
-        {
-          "img": "images/0057.png",
-          "inherit_codes": false
-        }
-      ]
-    },
-  
+        "name": "Mushroom",
+        "type": "progressive_toggle",
+        "stages": [
+            {
+                "img": "images/0012.png",
+                "codes": "shovel",
+                "secondary_codes": "none,default,clear"
+            },
+            {
+                "img": "images/0012.png",
+                "img_mods": "overlay|images/overlay_cross.png",
+                "disabled_img": "images/0012.png",
+                "disabled_img_mods": "@disabled,overlay|images/overlay_cross.png",
+                "codes": "shovel",
+                "secondary_codes": "used"
+            }
+        ]
+    },  
     // Lamp
     {
       "name": "Lamp",

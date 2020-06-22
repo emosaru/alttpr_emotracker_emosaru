@@ -9,8 +9,6 @@
           //  Northwest Hyrule
           {
             "name": "Northwest Hyrule",
-            "group": "Lost Woods",
-    
             "children": [
     
               //  Pedestal
@@ -58,8 +56,6 @@
               //  Kakariko
               {
                 "name": "Kakariko Village",
-                "group": "Kakariko Area",
-    
                 "children": [
                   {
                     "name": "Blind's House",
@@ -252,8 +248,6 @@
           //  Central Hyrule
           {
             "name": "Central Hyrule",
-            "group": "Central Hyrule",
-    
             "children": [
               {
                 "name": "Castle Secret Entrance",
@@ -393,7 +387,6 @@
                   },
                   {
                     "name": "Bombos Tablet",
-                    "group": "Desert Area",
                     "color": "#aa860d",
                     "sections": [
                       {
@@ -462,7 +455,6 @@
           //  Northeast Hyrule
           {
             "name": "Northeast Hyrule",
-            "group": "Northeast Hyrule",
             "children": [
               //  Witch
               {
@@ -556,7 +548,6 @@
           //  Eastern Hyrule
           {
             "name": "Eastern Hyrule",
-            "group": "Eastern Hyrule",
             "color": "#059134",
             "children": [
               //  Sahasrala
@@ -590,7 +581,6 @@
           //  North Hyrule
           {
             "name": "North Hyrule",
-            "group": "North Hyrule",
             "color": "#059134",
             "children": [
               //  Bonk Rocks
@@ -667,7 +657,6 @@
           //  Desert Area
           {
             "name": "Desert Area",
-            "group": "Desert Area",
             "color": "#aa860d",
             "children": [
               {
@@ -716,14 +705,12 @@
       {
         "name": "Northwest Dark World",
         "color": "#35046b",
-        "group": "Lost Woods",
         "access_rules": [ "aga1,hookshot,flippers,moonpearl", "aga1,hookshot,lift1,moonpearl", "aga1,hookshot,hammer,moonpearl", "lift1,hammer,moonpearl", "lift2,moonpearl" ],
         "children": [
     
           //  Village of Outcasts
           {
             "name": "Village of Outcasts",
-            "group": "Kakariko Area",
             "children": [
               {
                 "name": "C-Shaped House",
@@ -865,14 +852,12 @@
       //  Swamp Area
       {
         "name": "Swamp Area",
-        "group": "Swamp Area",
         "color": "#0d8452",
         "children": [
     
           //  Dark Swamp Area
           {
             "name": "Dark Swamp Area",
-            "group": "Swamp Area",
             "access_rules": [ "pearl, lift2", "pearl, hammer,lift1", "pearl,aga1,hammer" ]
           },
           {
@@ -902,7 +887,6 @@
       {
         "name": "Lake Hylia",
         "color": "#345a99",
-        "group": "Lake Hylia",
         "children": [
           {
             "name": "Mini Moldorm Cave",
@@ -987,7 +971,6 @@
       {
         "name": "Mire Area",
         "color": "#02473f",
-        "group": "Desert Area",
         "access_rules": [ "ocarina,lift2" ],
         "children": [
           //  Mire Hut
@@ -1041,7 +1024,6 @@
       //  Death Mountain
       {
         "name": "Death Mountain",
-        "group": "Death Mountain",
         "color": "#934f17",
         "access_rules": [ "lift1,[lamp]", "flute" ],
         "children": [
@@ -1179,7 +1161,6 @@
               //  Dark Death Mountain
               {
                 "name": "Dark Death Mountain",
-                "group": "Death Mountain",
                 "color": "#35046b",
                 "access_rules": [ "lift2" ],
                 "children": [

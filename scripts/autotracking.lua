@@ -197,13 +197,25 @@ function updateConsumableItemFromByte(segment, code, address)
     end
 end
 
-function updatePseudoProgressiveItemFromByteAndFlag(segment, code, address, flag)
+function updatePseudoProgressiveItemFromByteAndFlag(segment, code, address, flag, locationCode)
     local item = Tracker:FindObjectForCode(code)
     if item then
         local value = ReadU8(segment, address)
         local flagTest = value & flag
 
-        if flagTest ~= 0 then
+        local isCleared = false
+        if locationCode then
+            local location = Tracker:FindObjectForCode(locationCode)
+            if location then
+                if location.AvailableChestCount == 0 then
+                    isCleared = true
+                end
+            end
+        end
+
+        if isCleared then
+            item.CurrentStage = math.max(2, item.CurrentStage)
+        elseif flagTest ~= 0 then
             item.CurrentStage = math.max(1, item.CurrentStage)
         else
             item.CurrentStage = 0
@@ -296,11 +308,24 @@ function updateBatIndicatorStatus(status)
     end
 end
 
+function updateShovelIndicatorStatus(status)
+    local item = Tracker:FindObjectForCode("shovel")
+    if item then
+        if status then
+            item.CurrentStage = 1
+        else
+            item.CurrentStage = 0
+        end
+    end
+end
+
 function updateMushroomStatus(status)
     local item = Tracker:FindObjectForCode("mushroom")
     if item then
         if status then
-            item.CurrentStage = 2
+            item.CurrentStage = 1
+        else
+            item.CurrentStage = 0
         end
     end
 end
@@ -352,7 +377,7 @@ function updateOverworldEventsFromMemorySegment(segment)
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Spectacle Rock/Up On Top",              3)    
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Floating Island/Island",                5)    
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Race Game/Take This Trash",             40)    
-    updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Grove Digging Spot/Hidden Treasure",    42)    
+    updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Grove Digging Spot/Hidden Treasure",    42, updateShovelIndicatorStatus)    
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Desert Ledge/Ledge",                    48)    
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Lake Hylia Island/Island",              53)    
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Dam/Outside",                           59)    
@@ -466,12 +491,13 @@ function updateItemsFromMemorySegment(segment)
 
         updateToggleItemFromByteAndFlag(segment, "blue_boomerang", 0x7ef38c, 0x80)
         updateToggleItemFromByteAndFlag(segment, "red_boomerang",  0x7ef38c, 0x40)
+        updateToggleItemFromByteAndFlag(segment, "shovel", 0x7ef38c, 0x04)
         updateToggleItemFromByteAndFlag(segment, "powder", 0x7ef38c, 0x10)
+        updateToggleItemFromByteAndFlag(segment, "mushroom", 0x7ef38c, 0x20)
         updateToggleItemFromByteAndFlag(segment, "np_bow", 0x7ef38e, 0x80)
         updateToggleItemFromByteAndFlag(segment, "np_silvers", 0x7ef38e, 0x40)
 
-        updatePseudoProgressiveItemFromByteAndFlag(segment, "mushroom", 0x7ef38c, 0x20)
-        updatePseudoProgressiveItemFromByteAndFlag(segment, "shovel", 0x7ef38c, 0x04)
+        updatePseudoProgressiveItemFromByteAndFlag(segment, "shovel", 0x7ef38c, 0x04, "@Grove Digging Spot/Hidden Treasure")
 
         updateProgressiveBow(segment)
         updateBottles(segment)
