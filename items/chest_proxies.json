@@ -1,4 +1,11 @@
 [
+    // Escape Chests (Non-Keysanity Only)
+    {
+        "name": "Escape Chests",
+        "type": "sectionchests",
+        "codes": "escape_chests",
+        "section": "@Hyrule Castle & Sanctuary/Escape"
+    },    
     // EP Chests
     {
         "name": "Eastern Palace Chests",

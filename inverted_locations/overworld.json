@@ -954,7 +954,7 @@
     {
         "name": "Mire Area",
         "color": "#02473f",
-        "access_rules": [ "flute,@Lower Light World", "@Lower Light World - Allow Bunny,mirror" ],
+        "access_rules": [ "flute,@Lower Light World", "activated_flute", "@Lower Light World - Allow Bunny,mirror" ],
         "children": [
             {
                 "name": "Mire Shack",
@@ -977,7 +977,7 @@
     {
         "name": "Dark Death Mountain",
         "color": "#6f6539",
-        "access_rules": [ "flute,@Lower Light World", "lift1,[lamp]" ],
+        "access_rules": [ "flute,@Lower Light World", "activated_flute", "lift1,[lamp]" ],
         "children": [
             {
                 "name": "Old Man",
