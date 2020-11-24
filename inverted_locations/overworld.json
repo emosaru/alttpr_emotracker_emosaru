@@ -913,7 +913,7 @@
     {
         "name": "East Dark World",
         "color": "#35046b",
-        "access_rules": [ "hammer", "flippers", "lift2,pearl,mirror", "aga1,mirror" ],
+        "access_rules": [ "hammer", "flippers", "lift2,pearl,mirror", "aga1,mirror", "activated_flute" ],
         "children": [
             {
                 "name": "Pyramid Ledge",

@@ -497,18 +497,10 @@ function updateItemsFromMemorySegment(segment)
         updateToggleItemFromByteAndFlag(segment, "np_silvers", 0x7ef38e, 0x40)
         updateToggleItemFromByteAndFlag(segment, "mirror", 0x7ef353, 0x02)
 
-        updatePseudoProgressiveItemFromByteAndFlag(segment, "shovel", 0x7ef38c, 0x04, "@Grove Digging Spot/Hidden Treasure")
-
         updateProgressiveBow(segment)
         updateBottles(segment)
         updateFlute(segment)
         updateAga1(segment)
-    
-        --  We support big keys, but not small keys. There is no way, in ram, to determine speciflcally
-        --  the number of chest keys you have obtained that is
-        --      a) reliable regardless of timing, and...
-        --      b) does not necessitate accessing the item table directly, which
-        --          constitutes cheating and is disallowed.
 
         updateToggleItemFromByteAndFlag(segment, "gt_bigkey",  0x7ef366, 0x04)
         updateToggleItemFromByteAndFlag(segment, "tr_bigkey",  0x7ef366, 0x08)
@@ -522,6 +514,20 @@ function updateItemsFromMemorySegment(segment)
         updateToggleItemFromByteAndFlag(segment, "dp_bigkey",  0x7ef367, 0x10)
         updateToggleItemFromByteAndFlag(segment, "ep_bigkey",  0x7ef367, 0x20)
 
+        -- Pending small key from chests tracking update
+        -- updateConsumableItemFromByte(segment, "hc_smallkey",  0x7ef37c)
+        -- updateConsumableItemFromByte(segment, "dp_smallkey",  0x7ef37f)
+        -- updateConsumableItemFromByte(segment, "at_smallkey",  0x7ef380)
+        -- updateConsumableItemFromByte(segment, "sp_smallkey",  0x7ef381)
+        -- updateConsumableItemFromByte(segment, "pod_smallkey", 0x7ef382)
+        -- updateConsumableItemFromByte(segment, "mm_smallkey",  0x7ef383)
+        -- updateConsumableItemFromByte(segment, "sw_smallkey",  0x7ef384)
+        -- updateConsumableItemFromByte(segment, "ip_smallkey",  0x7ef385)
+        -- updateConsumableItemFromByte(segment, "toh_smallkey", 0x7ef386)
+        -- updateConsumableItemFromByte(segment, "tt_smallkey",  0x7ef387)
+        -- updateConsumableItemFromByte(segment, "tr_smallkey",  0x7ef388)
+        -- updateConsumableItemFromByte(segment, "gt_smallkey",  0x7ef389)
+       
     end
 
     if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then

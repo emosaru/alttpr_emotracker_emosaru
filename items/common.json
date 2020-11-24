@@ -250,7 +250,7 @@
     },
     // Shovel
     {
-        "name": "Mushroom",
+        "name": "Shovel",
         "type": "progressive_toggle",
         "stages": [
             {
